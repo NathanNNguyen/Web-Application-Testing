@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import Display from  './Display'
 
 function Dashboard() {
-
-  const [strikes, setStrikes] = useState('');
-  const [balls, setBalls] = useState('');
+  const [strikes, setStrikes] = useState(0);
+  const [balls, setBalls] = useState(0);
   
   const ballHandle = (e) => {
     e.preventDefault();
@@ -48,6 +48,7 @@ function Dashboard() {
 
   return (
     <div>
+      <Display balls={balls} strikes={strikes}/>
       <button onClick={strikeHandle}>Strike</button>
       <button onClick={ballHandle}>Ball</button>
       <button onClick={foulHandle}>Foul</button>

@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Display() {
+function Display({balls, strikes}) {
+
   return (
     <div>
-      Hello Display
+      <h2>Balls: {balls}</h2>
+      <h2>Strikes: {strikes}</h2>
     </div>
   );
 }
