@@ -3,7 +3,7 @@ import './App.css';
 import Dashboard from './Components/Dashboard';
 
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Dashboard />
@@ -11,4 +11,3 @@ function App() {
   );
 }
 
-export default App;

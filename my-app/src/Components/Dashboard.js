@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Display from  './Display'
+import Display from  './Display';
+import  './button.css';
 
 function Dashboard() {
   const [strikes, setStrikes] = useState(0);
@@ -13,7 +14,7 @@ function Dashboard() {
     else {
       setBalls(0)
     }
-    console.log(balls)
+    // console.log(balls)
   }
 
   const strikeHandle = (e) => {
@@ -23,7 +24,7 @@ function Dashboard() {
     } else {
       setStrikes(0)
     }
-    console.log(strikes)
+    // console.log(strikes)
   }
 
   const foulHandle = (e) => {
@@ -35,24 +36,24 @@ function Dashboard() {
     } else {
       setStrikes(strikes)
     }
-    console.log(strikes)
+    // console.log(strikes)
   }
 
   const hitHandle = (e) => {
     e.preventDefault();
       setBalls(0);
       setStrikes(0);
-      console.log(balls, strikes)
+      // console.log(balls, strikes)
   }
 
 
   return (
     <div>
       <Display balls={balls} strikes={strikes}/>
-      <button onClick={strikeHandle}>Strike</button>
-      <button onClick={ballHandle}>Ball</button>
-      <button onClick={foulHandle}>Foul</button>
-      <button onClick={hitHandle}>Hit</button>
+      <button className='button' onClick={strikeHandle}>Strike</button>
+      <button className='button' onClick={ballHandle}>Ball</button>
+      <button className='button' onClick={foulHandle}>Foul</button>
+      <button className='button' onClick={hitHandle}>Hit</button>
     </div>
   );
 }
